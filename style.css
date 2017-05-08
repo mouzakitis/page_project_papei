@@ -117,17 +117,3 @@ a:hover{
 	font-size: 20px;
 	font-weight: 600;
 }
-.btnNext{
-
-	position: relative;
-	display: block;
-	left: 50%;
-	margin-left: -55px; 
-	cursor: pointer;
-    color: #000;
-    margin: 4px 2px;
-    padding: 10px 22px;
-    font-weight: 600;
-    font-size: 16px;
-
-}
