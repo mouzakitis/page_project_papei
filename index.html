@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Πρακτωρίο Κρατήσεων</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Αρχική</a></li>
+				<li><a href="#krathseis">Κρατήσεις</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	<main>
+		<div class="container slide_1">
+			<button class="btn btn_play">&#9658;</button>
+		</div>
+
+		<div class="info">
+			<p>Καλώς ήρθατε στην σελίδα του πρακτωρίου μας όπου εδώ θα βρείτε όσες πληροφορίες θέλετε για τα ξενοδοχεία τα οποία συνεγραζόμαστε <a href="#krathseis">εδώ</a>!</p>
+		</div>
+
+			<div id="thumbwrap">
+
+				<a class="thumb" href="#"><img src="img/hotel_1_1.jpg" alt=""><span><img src="img/hotel_1_1_1.jpg" alt=""></span></a>
+				<a class="thumb" href="#"><img src="img/hotel_2_2.jpg" alt=""><span><img src="img/hotel_2_2_2.jpg" alt=""></span></a>
+				<a class="thumb" href="#"><img src="img/hotel_3_3.jpg" alt=""><span><img src="img/hotel_3_3_3.jpg" alt=""></span></a>
+				<a class="thumb" href="#"><img src="img/hotel_4_4.jpg" alt=""><span><img src="img/hotel_4_4_4.jpg" alt=""></span></a>
+
+			</div>
+
+			<div id="krathseis">
+
+			<form>
+				<div class="choose">
+					<p>Εδώ πρέπει να επιλέξετε πόσες νύχτες θα παραμείνετε στο δωμάτιο:</p> 
+					<input type="radio" name="chooseone" value="Μία βραδιά"><label> Μία βραδιά</label><br> 
+					<input type="radio" name="chooseone" value="Παραπάνω από μία βραδιά">
+					<label> Παραπάνω από μία βραδιά</label>
+
+					<button class="btnNext">Συνέχεια</button>
+				</div>
+
+			</form>
+
+		</div>
+	</main>
+
+<script>
+  var imageCounter = 1;
+
+
+$('.btn_play').on("click", function () {
+    $('.btn_play').css('display','none');
+    autoplay ();
+    
+});
+
+
+  function changeImage () {
+    var containerElement = document.querySelector('.container');
+      if(imageCounter > 4) {
+        imageCounter = 1;
+      }
+      else if (imageCounter < 1) {
+        imageCounter =4;
+      }
+      containerElement.className = "container slide_"  + imageCounter;
+  }
+
+
+
+  function autoplay () {
+    var autoplay = setInterval ( function (){
+      if(imageCounter == 40) {
+        clearInterval(autoplay);
+        $('.btn_play').css('display','block');
+      }
+      else {
+        imageCounter++;
+        changeImage ();
+      }
+    },4000);
+  }
+
+</script>
+
+</body>
+</html>

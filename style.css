@@ -1,0 +1,133 @@
+body{
+	padding: 0;
+	margin:0; 
+	background-color: #5B6370;
+}
+.container {
+	margin-top: 70px;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	transition: 0.5s;
+}
+.slide_1{
+	background-image: url("img/hotel_1.jpg");
+}
+.slide_2{
+	background-image: url("img/hotel_2.jpg");
+}
+.slide_3{
+	background-image: url("img/hotel_3.jpg");
+}
+.slide_4{
+	background-image: url("img/hotel_4.jpg");
+}
+
+.btn{
+	position: absolute;
+	top: 50%;    
+	background: transparent;
+    border: 3px solid;
+    border-color: #92e6e8;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: 800;
+    color: #92e6e8;
+    cursor: pointer;
+}
+
+.btn_play{
+	left: 50%;
+	margin-left: -15px;
+    border-radius: 50px;
+    padding: 12px 15px;
+    display: block;
+
+}
+
+ul {
+	margin-top: 30px; 
+	text-align: center;
+    list-style-type: none;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+li {
+    display: inline;
+    padding: 18px;
+}
+
+li a {
+    color: #92e6e8;
+    padding: 8px 10px;
+    text-decoration: none;
+}
+.info{
+	position: relative;
+	margin-top: 20px;
+}
+p{
+	text-align: center;
+	font-size: 26px;
+	font-weight: 600;
+	color: #92e6e8;
+}
+a {
+	text-decoration: none;
+	color: #37a52b;
+}
+a:hover{
+	color: #f39b14;
+	transition: 0.5s;
+	text-shadow: 2px 2px #000;
+}
+
+#krathseis{
+	position: relative;
+	width: 100%;
+
+}
+#thumbwrap {
+	position:relative;
+	margin:75px auto;
+	width:252px; height:252px;
+}
+.thumb img { 
+	border:1px solid #000;
+	margin:3px;
+	float:left;
+}
+.thumb span { 
+	position:absolute;
+	visibility:hidden;
+}
+.thumb:hover, .thumb:hover span { 
+	visibility:visible;
+	top:0; left:250px; 
+	z-index:1;
+}
+.choose{
+	text-align: center;
+	position: relative;
+	padding-bottom: 20px;
+	font-size: 20px;
+	font-weight: 600;
+}
+.btnNext{
+
+	position: relative;
+	display: block;
+	left: 50%;
+	margin-left: -55px; 
+	cursor: pointer;
+    color: #000;
+    margin: 4px 2px;
+    padding: 10px 22px;
+    font-weight: 600;
+    font-size: 16px;
+
+}
